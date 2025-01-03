@@ -1,0 +1,13 @@
+@media screen and (max-width :500px) {
+
+
+
+  .news {
+    & .container {
+      .d {
+        width: 100%;
+        height: 45px;
+      }
+    }
+  }
+}
