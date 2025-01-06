@@ -16,10 +16,37 @@
   .brand .text-box {
     margin-left: 43px;
   }
-}
 
-.gridtext {
-  div {
-    width: calc(50% - 22px / 2);
+
+  .gridtext {
+    div {
+      width: calc(50% - 22px / 2);
+    }
+  }
+
+  .adress-flex-box {
+    display: block;
+  }
+
+  .category__mainmenu {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  .category__submenu {
+    display: none;
+    overflow: hidden;
+    font-size: 13px;
+  }
+
+  .category__icons-down {
+    display: block;
+  }
+
+  .category__icons-up {
+    transform: rotate(180deg);
+    display: none;
   }
 }

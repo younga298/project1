@@ -178,3 +178,31 @@ $(document).ready(function () {
     $(this).removeClass('active');
   })
 });
+
+//footer
+$(document).ready(function () {
+  function toggleSubmenu() {
+    if ($(window).width() <= 750) {
+      $(".category__mainmenu").off("click").on("click", function () {
+        const target = $(this).attr("data-target");
+        $(`.category__submenu[data-id = ${target}]`).stop().slideToggle();
+
+        const iconDown = $(this).find(".category__icons-down");
+        const iconUp = $(this).find(".category__icons-up");
+
+        iconDown.toggle();
+        iconUp.toggle();
+      });
+
+    } else {
+      $(".category__submenu").slideDown();
+      $(".category__mainmenu").off("click");
+    }
+  }
+  toggleSubmenu(); //초기실행
+  $(window).resize(function () {
+    toggleSubmenu();
+  });
+
+
+});
