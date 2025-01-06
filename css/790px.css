@@ -45,6 +45,25 @@
 
   }
 
+  .circle {
+    font-size: 20px;
+  }
+
+  section {
+    & .text-box {
+      .title {
+        font-size: 22px;
+      }
+    }
+  }
+
+  section {
+    & .text-box {
+      .substance {
+        font-size: 16px;
+      }
+    }
+  }
 
   .brandimg-text .swiper {
     width: 100%;
