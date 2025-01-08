@@ -65,15 +65,15 @@ $(document).ready(function () {
 
         $(`.sub-menu[data-id="${targetId}"]`).addClass('active'); // 해당 submenu 활성화
 
-        $('body').addClass('scroll-disabled'); //body scroll 비활성화
+        $('body').addClass('scroll-disabled'); //body scroll 활성화
       });
 
       // Back button
-      $('.back-button').off('mouseover').on('click', function () {
+      $('.back-button , .closebtn').off('mouseover').on('click', function () {
         $('.sub-menu').removeClass('active'); // 모든 submenu 비활성화
         $('.main-menu').show(); // Main menu 다시 표시
         $('.back-button').removeClass('active');
-
+        $('body').removeClass('scroll-disabled'); //body 활성화
       });
       $('.sub-menu').removeClass('active'); // 리사이즈 시 모든 서브 메뉴 비활성화
       $('.main-menu').show(); // 메인 메뉴 다시 표시
@@ -87,6 +87,7 @@ $(document).ready(function () {
         const targetId = $(this).attr('data-target');
         $('.sub-menu').removeClass('active');
         $(`.sub-menu[data-id="${targetId}"]`).addClass('active');
+
       });
 
     }
@@ -97,7 +98,7 @@ $(document).ready(function () {
 
   // Reapply logic on window resize
   $(window).on('resize', handleResponsiveMenu);
-  // $('body').removeClass('scroll-disabled'); //body 활성화
+  $('body').removeClass('scroll-disabled'); //body 활성화
 });
 
 //popup 닫기
@@ -106,9 +107,11 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('.navbtn ').click(function () {
     $('.popup').show();
+    $('body').css('overflow-y', 'hidden');
   })
   $('.closebtn').click(function () {
     $('.popup').hide();
+    $('body').css('overflow-y', '');
   })
 });
 
