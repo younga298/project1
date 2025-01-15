@@ -18,7 +18,6 @@ var swiper = new Swiper(".brandimg-text .mySwiper", {
 });
 
 
-//brandimg slider
 
 var swiper = new Swiper(".brandimg .mySwiper1", {
   direction: "vertical",
@@ -29,57 +28,39 @@ var swiper = new Swiper(".brandimg .mySwiper1", {
   },
 });
 
-//popup
-
-// $(document).ready(function () {
-
-//   // nav menu
-//   $('nav > ul > li').mouseenter(function () {
-//     $(`.sub-menu`).removeClass('active');
-
-//     const targetId = $(this).attr('data-target');
-
-//     $(`.sub-menu[data-id="${targetId}"]`).addClass('active');
-//   })
-
-//   // $('.sub-menu').mouseleave(function () {
-//   //   $(this).removeClass('active');
-//   // })
 
 
-// });
 
-//500px ~ 790px
+
 
 $(document).ready(function () {
   const handleResponsiveMenu = () => {
     if ($(window).width() <= 790) {
-      // Main menu hover
+
       $('nav > ul > li').off('mouseover').on('click', function () {
         const targetId = $(this).attr('data-target');
 
-        // Show submenu and hide main menu text
-        $('.main-menu').hide(); // Main menu 숨김
+        $('.main-menu').hide();
         $('.back-button').addClass('active');
-        $('.sub-menu').removeClass('active'); // 모든 submenu 비활성화
+        $('.sub-menu').removeClass('active');
 
-        $(`.sub-menu[data-id="${targetId}"]`).addClass('active'); // 해당 submenu 활성화
+        $(`.sub-menu[data-id="${targetId}"]`).addClass('active');
 
-        $('body').addClass('scroll-disabled'); //body scroll 활성화
+        $('body').addClass('scroll-disabled');
       });
 
-      // Back button
+
       $('.back-button , .closebtn').off('mouseover').on('click', function () {
-        $('.sub-menu').removeClass('active'); // 모든 submenu 비활성화
-        $('.main-menu').show(); // Main menu 다시 표시
+        $('.sub-menu').removeClass('active');
+        $('.main-menu').show();
         $('.back-button').removeClass('active');
-        $('body').removeClass('scroll-disabled'); //body 활성화
+        $('body').removeClass('scroll-disabled');
       });
-      $('.sub-menu').removeClass('active'); // 리사이즈 시 모든 서브 메뉴 비활성화
-      $('.main-menu').show(); // 메인 메뉴 다시 표시
+      $('.sub-menu').removeClass('active');
+      $('.main-menu').show();
       $('.back-button').removeClass('active');
     } else {
-      // Restore default behavior for larger screens
+
       $('.sub-menu__group').addClass('active');
       $('.main-menu').show();
 
@@ -93,30 +74,30 @@ $(document).ready(function () {
     }
   };
 
-  // Initial setup
+
   handleResponsiveMenu();
 
-  // Reapply logic on window resize
+
   $(window).on('resize', handleResponsiveMenu);
-  $('body').removeClass('scroll-disabled'); //body 활성화
+  $('body').removeClass('scroll-disabled');
 });
 
-//popup 닫기
 
 
 $(document).ready(function () {
   $('.navbtn ').click(function () {
     $('.popup').show();
-    $('body').css('overflow-y', 'hidden');
+    $('body').addClass('scroll-disabled');
   })
   $('.closebtn').click(function () {
     $('.popup').hide();
-    $('body').css('overflow-y', '');
+    $('body').removeClass('scroll-disabled');
+
   })
 });
 
 
-//Circle
+
 
 $(document).ready(function () {
   $('.img-box').mouseenter(function () {
@@ -128,7 +109,7 @@ $(document).ready(function () {
   })
 });
 
-//header
+
 
 $(document).ready(function () {
   let lastScrollTop = 0;
@@ -147,7 +128,7 @@ $(document).ready(function () {
   })
 });
 
-//readmore-circle
+
 
 $(document).ready(function () {
   $('.readmore').mouseenter(function () {
@@ -159,7 +140,7 @@ $(document).ready(function () {
   })
 });
 
-//newsall
+
 
 $(document).ready(function () {
   $('.container').mouseenter(function () {
@@ -171,7 +152,6 @@ $(document).ready(function () {
 });
 
 
-//.loading
 
 $(document).ready(function () {
   $('.container').mouseenter(function () {
@@ -182,7 +162,7 @@ $(document).ready(function () {
   })
 });
 
-//footer
+
 $(document).ready(function () {
   function toggleSubmenu() {
     if ($(window).width() <= 750) {
@@ -202,7 +182,7 @@ $(document).ready(function () {
       $(".category__mainmenu").off("click");
     }
   }
-  toggleSubmenu(); //초기실행
+  toggleSubmenu();
   $(window).resize(function () {
     toggleSubmenu();
   });
