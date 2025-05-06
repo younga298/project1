@@ -3,10 +3,7 @@ var swiper = new Swiper(".brandimg-text .mySwiper", {
   spaceBetween: 40,
   loop: true,
 
-  pagination: {
-    el: ".brandimg-text .swiper-pagination",
-    clickable: true,
-  },
+
   navigation: {
     nextEl: ".brandimg-text .swiper-button-next",
     prevEl: ".brandimg-text .swiper-button-prev",
@@ -99,15 +96,7 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
-  $('.img-box').mouseenter(function () {
-    $(this).addClass('active');
-  })
 
-  $('.img-box').mouseleave(function () {
-    $(this).removeClass('active')
-  })
-});
 
 
 
@@ -130,37 +119,10 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
-  $('.readmore').mouseenter(function () {
-    $(this).addClass('active');
-  })
-
-  $('.readmore').mouseleave(function () {
-    $(this).removeClass('active');
-  })
-});
 
 
 
-$(document).ready(function () {
-  $('.container').mouseenter(function () {
-    $(this).addClass('active');
-  });
-  $('.container').mouseleave(function () {
-    $(this).removeClass('active');
-  });
-});
 
-
-
-$(document).ready(function () {
-  $('.container').mouseenter(function () {
-    $(this).addClass('active');
-  });
-  $('.container').mouseleave(function () {
-    $(this).removeClass('active');
-  })
-});
 
 
 $(document).ready(function () {

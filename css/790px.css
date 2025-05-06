@@ -36,14 +36,12 @@
     }
   }
 
-  .roundsquare {
-    .imagebox {
+    .roundsquare-box{
       flex-direction: column;
       justify-content: center;
 
     }
 
-  }
 
   .circle {
     font-size: 20px;
